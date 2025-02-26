@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register System</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <!-- Login Form -->
+            <div class="form-section" id="loginForm">
+                <h2>Login</h2>
+                <form onsubmit="return handleLogin(event)">
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" required placeholder="Password">
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="toggleForms()">Register here</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div class="form-section hidden" id="registerForm">
+                <h2>Register</h2>
+                <form onsubmit="return handleRegister(event)">
+                    <div class="form-group">
+                        <input type="text" id="registerName" required placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="registerEmail" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="registerPassword" required placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
